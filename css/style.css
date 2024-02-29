@@ -1,0 +1,601 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-body: "Heebo", sans-serif;
+  --color-branco: #fff;
+  --color-preto: #000000;
+  --color-gelo: #b8e7f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body) !important;
+}
+body .bg-image {
+  background-image: url(../images/imagem-menu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body header {
+  min-height: 100vh;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+}
+body header a {
+  color: var(--color-branco);
+  margin-left: 2rem;
+  text-decoration: none !important;
+}
+body header a:hover {
+  color: var(--color-branco) !important;
+}
+body header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  color: var(--color-branco);
+}
+body header div {
+  min-height: 80vh;
+}
+body header .text-dfs {
+  font-size: 2rem;
+  font-weight: 600;
+}
+body header .text-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-branco);
+  gap: 0.5rem;
+}
+body header .text-header-titulo {
+  font-size: 6vmax;
+  font-weight: 600;
+}
+body header .text-header-botao {
+  color: var(--color-branco);
+  background: transparent;
+  padding: 0.4rem;
+  border: 2px solid var(--color-branco);
+  border-radius: 10px;
+}
+body header .text-header-botao:hover {
+  background-color: var(--color-branco);
+  color: var(--color-preto) !important;
+}
+@media only screen and (max-width: 768px) {
+  body header {
+    min-height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  body nav {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  body a {
+    margin: 1rem 0;
+  }
+  body ul {
+    margin: 0;
+  }
+  body div {
+    min-height: auto;
+  }
+  body .text-p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+  }
+  body .text-header-titulo {
+    font-size: 4vmax;
+  }
+  body .text-dfs {
+    font-size: 1.5rem;
+  }
+  body .text-header-botao {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body header {
+    min-height: 70vh;
+  }
+  body nav {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  body a {
+    margin: 0;
+  }
+  body ul {
+    margin: 1rem 0;
+  }
+  body div {
+    min-height: 80vh;
+  }
+  body .text-p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+  }
+  body .text-header-titulo {
+    font-size: 5vmax;
+  }
+  body .text-dfs {
+    font-size: 1.8rem;
+  }
+  body .text-header-botao {
+    font-size: 1rem;
+  }
+}
+body main .bg-preto {
+  background-color: var(--color-preto);
+}
+body main .bg-gelo {
+  background-color: var(--color-gelo);
+}
+body main .grid {
+  width: 100%;
+  min-height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 5rem 20rem 15rem;
+  grid-template-areas: "box1 box1 box1" "box2 box3 box4" "box5 box5 box5";
+  gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  body main .grid {
+    gap: 0.4rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 5rem repeat(3, 25rem) 40rem;
+    grid-template-areas: "box1" "box2" "box3" "box4" "box5";
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body main .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5rem 10rem 20rem;
+    grid-template-areas: "box1 box1 box1" "box2 box3 box4" "box5 box5 box5";
+    gap: 0.4rem;
+  }
+}
+body main .grid-impactos {
+  width: 100%;
+  min-height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5rem 30rem;
+  grid-template-areas: "box1 box1 box1 box1" "box2 box2 box3 box3";
+  gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  body main .grid-impactos {
+    gap: 0.4rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 5rem 30rem 30rem;
+    grid-template-areas: "box1" "box2" "box3";
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body main .grid-impactos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5rem repeat(2, 10rem);
+    grid-template-areas: "box1 box1" "box2 box3" "box2 box3";
+    gap: 0.4rem;
+  }
+}
+body main .grid-solucao {
+  width: 100%;
+  min-height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5rem 10rem 25rem 30rem;
+  grid-template-areas: "box1 box1 box1 box1" "box2 box2 box2 box2" "box3 box3 box4 box4" "box5 box5 box5 box5";
+  gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  body main .grid-solucao {
+    gap: 0.4rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 5rem 20rem repeat(2, 25rem) 60rem;
+    grid-template-areas: "box1" "box2" "box3" "box4" "box5";
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body main .grid-solucao {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5rem repeat(2, 15rem) 40rem;
+    grid-template-areas: "box1 box1" "box2 box2" "box3 box4" "box5 box5";
+    gap: 0.4rem;
+  }
+}
+body main .grid-smart {
+  width: 100%;
+  min-height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5rem repeat(2, 25rem);
+  grid-template-areas: "box1 box1 box1 box1" "box2 box2 box3 box3" "box4 box4 box5 box5";
+  gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  body main .grid-smart {
+    gap: 0.4rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 5rem 25rem repeat(2, 20rem) 25rem;
+    grid-template-areas: "box1" "box2" "box3" "box4" "box5";
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body main .grid-smart {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5rem repeat(2, 25rem);
+    grid-template-areas: "box1 box1" "box2 box3" "box4 box5";
+    gap: 0.4rem;
+  }
+}
+body main .grid-resultados {
+  width: 100%;
+  min-height: 95vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5rem 25rem 25rem 6rem;
+  grid-template-areas: "box1 box1 box1 box1" "box2 box2 box2 box2" "box3 box3 box4 box4" "box5 box5 box5 box5";
+  gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  body main .grid-resultados {
+    gap: 0.4rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 5rem 50rem repeat(2, 25rem) 6rem;
+    grid-template-areas: "box1" "box2" "box3" "box4" "box5";
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body main .grid-resultados {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5rem 25rem 20rem 7rem;
+    grid-template-areas: "box1 box1" "box2 box2" "box3 box4" "box5 box5";
+    gap: 0.4rem;
+  }
+}
+body main section {
+  display: flex;
+}
+body main section .grid1 {
+  grid-area: box1;
+}
+body main section .grid2 {
+  grid-area: box2;
+}
+body main section .grid3 {
+  grid-area: box3;
+}
+body main section .grid4 {
+  grid-area: box4;
+}
+body main section .grid5 {
+  grid-area: box5;
+}
+body main section .grid6 {
+  grid-area: box6;
+}
+body main section .box1 {
+  background-color: var(--color-preto);
+  position: relative;
+}
+body main section .box2 {
+  background-image: url(../images/imagem-problema-1.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+body main section .box3 {
+  background-image: url(../images/imagem-problema-2.jpeg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+body main section .box4 {
+  background-image: url(../images/imagem-problema-3.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+body main section .box5 {
+  background-color: var(--color-preto);
+  position: relative;
+}
+body main section .text-titulo {
+  color: var(--color-branco);
+  margin-top: 2rem;
+  margin-left: 5rem;
+  font-size: 2rem;
+}
+body main section .text-texto {
+  color: var(--color-branco);
+  position: absolute;
+  left: 4rem;
+  top: 1rem;
+  right: 4rem;
+}
+body main .section-impactos .grid1 {
+  grid-area: box1;
+}
+body main .section-impactos .grid2 {
+  grid-area: box2;
+}
+body main .section-impactos .grid3 {
+  grid-area: box3;
+}
+body main .section-impactos .caixa1 {
+  background-color: var(--color-gelo);
+  position: relative;
+}
+body main .section-impactos .caixa2 {
+  background-color: var(--color-gelo);
+  position: relative;
+}
+body main .section-impactos .caixa3 {
+  background-image: url(../images/gif-impactos.gif);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+body main .section-impactos h2 {
+  color: var(--color-preto);
+  position: absolute;
+  left: 4rem;
+  top: 2rem;
+  font-size: 2rem;
+}
+body main .section-impactos p {
+  color: var(--color-preto);
+  position: absolute;
+  left: 4rem;
+  top: 1rem;
+  right: 4rem;
+}
+body main .section-solucao .grid1 {
+  grid-area: box1;
+}
+body main .section-solucao .grid2 {
+  grid-area: box2;
+}
+body main .section-solucao .grid3 {
+  grid-area: box3;
+}
+body main .section-solucao .grid4 {
+  grid-area: box4;
+}
+body main .section-solucao .grid5 {
+  grid-area: box5;
+}
+body main .section-solucao .container1 {
+  background-color: var(--color-preto);
+  position: relative;
+}
+body main .section-solucao .container2 {
+  background-color: var(--color-preto);
+  position: relative;
+}
+body main .section-solucao .container3 {
+  background-image: url(../images/imagem-solução-1.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+body main .section-solucao .container4 {
+  background-image: url(../images/imagem-solução-2.jpeg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-right: 4rem;
+  margin-left: 4rem;
+}
+body main .section-solucao .container5 {
+  background-color: var(--color-preto);
+  position: relative;
+}
+body main .section-solucao h2 {
+  color: var(--color-branco);
+  position: absolute;
+  left: 4rem;
+  top: 2rem;
+  font-size: 2rem;
+}
+body main .section-solucao p {
+  color: var(--color-branco);
+  position: absolute;
+  left: 4rem;
+  top: 1rem;
+  right: 4rem;
+}
+body main .section-solucao ul {
+  color: var(--color-branco);
+  position: absolute;
+  left: 6rem;
+  top: 10rem;
+  right: 4rem;
+}
+body main .section-smart .grid1 {
+  grid-area: box1;
+}
+body main .section-smart .grid2 {
+  grid-area: box2;
+}
+body main .section-smart .grid3 {
+  grid-area: box3;
+}
+body main .section-smart .grid4 {
+  grid-area: box4;
+}
+body main .section-smart .grid5 {
+  grid-area: box5;
+}
+body main .section-smart .div1 {
+  background-color: var(--color-gelo);
+  position: relative;
+}
+body main .section-smart .div2 {
+  background-image: url(../images/gif-smart-cities-1.gif);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 1rem;
+}
+body main .section-smart .div3 {
+  background-color: var(--color-gelo);
+  position: relative;
+}
+body main .section-smart .div4 {
+  background-color: var(--color-gelo);
+  position: relative;
+}
+body main .section-smart .div5 {
+  background-image: url(../images/gif-smart-cities-2.gif);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+body main .section-smart p {
+  color: var(--color-preto);
+  position: absolute;
+  left: 4rem;
+  top: 1rem;
+  right: 4rem;
+}
+body main .section-smart h2 {
+  color: var(--color-preto);
+  position: absolute;
+  left: 4rem;
+  top: 2rem;
+  font-size: 2rem;
+}
+body main .section-resultados .grid1 {
+  grid-area: box1;
+}
+body main .section-resultados .grid2 {
+  grid-area: box2;
+}
+body main .section-resultados .grid3 {
+  grid-area: box3;
+}
+body main .section-resultados .grid4 {
+  grid-area: box4;
+}
+body main .section-resultados .grid5 {
+  grid-area: box5;
+}
+body main .section-resultados .guarda1 {
+  background-color: var(--color-preto);
+  position: relative;
+}
+body main .section-resultados .guarda2 {
+  background-color: var(--color-preto);
+  position: relative;
+}
+body main .section-resultados .guarda3 {
+  background-image: url(../images/imagem-resultados-1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+body main .section-resultados .guarda4 {
+  background-image: url(../images/imagem-resultados-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-right: 4rem;
+  margin-left: 4rem;
+}
+body main .section-resultados .guarda5 {
+  background-color: var(--color-preto);
+  position: relative;
+  bottom: 1rem;
+}
+body main .section-resultados .text-modal {
+  width: 20rem;
+}
+body main .section-resultados h2 {
+  color: var(--color-branco);
+  position: absolute;
+  left: 4rem;
+  top: 2rem;
+  font-size: 2rem;
+}
+body main .section-resultados p {
+  color: var(--color-branco);
+  position: absolute;
+  left: 4rem;
+  top: 1rem;
+  right: 4rem;
+}
+body main .section-resultados ul {
+  color: var(--color-branco);
+  position: absolute;
+  left: 6rem;
+  top: 6rem;
+  right: 4rem;
+}
+body main .section-modal {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+  gap: 0.5rem;
+}
+body footer {
+  text-align: center;
+  background-color: var(--color-gelo);
+}
+body footer p {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
